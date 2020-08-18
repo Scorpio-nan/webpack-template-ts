@@ -9,9 +9,9 @@
 ## 配置项目内url：
     项目内url分为开发环境url和部署环境url，分别对应外层config文件夹中的-开发.js和部署.js
     1、开发环境：
-        运行npm run dev的话，会先执行-开发.js，在项目打包的目标路径static/json/下新建一个urls.json，并将-开发.js中的testData写入到urls.json中，然后在启动项目
+        运行npm run dev的话，会先执行-devServer.js，在项目打包的目标路径static/json/下新建一个urls.json，并将-开发.js中的testData写入到urls.json中，然后在启动项目
     2、部署环境：
-        同理，运行npm run build的话，会先执行-部署.js，在项目打包的目标路径static/json/下新建一个urls.json,并将-部署.js中的testData写入到urls.json中，然后再进行项目打包
+        同理，运行npm run build的话，会先执行-buildProd.js，在项目打包的目标路径static/json/下新建一个urls.json,并将-部署.js中的testData写入到urls.json中，然后再进行项目打包
    无论开发还是部署，经过上述步骤后，在程序中，src/public/config.js中，通过ajax请求，请求我们上面生成的urls.json，拿到数据后，通过循环把这些变量挂在到window对象中，形成全局变量，这样每个页面的js都可以直接调用，比如let last = await axios.get(URL + 'xxx接口');直接使用URL即可
 ## 何时dev？何时build--test？何时build--prod?
     dev:
