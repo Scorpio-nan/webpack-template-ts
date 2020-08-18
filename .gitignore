@@ -1,0 +1,5 @@
+/node_modules
+/static/json/urls.json
+/dist
+/dist.zip
+.vs

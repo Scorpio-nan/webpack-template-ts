@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    #include('../../include/head.html');
+</head>
+<body>
+    <div id = "app" v-cloak>
+        #include('../../include/header.html');
+        <div class = "container">
+            {{msg}}
+            <a href="/pages/news/news.html">跳转新闻页</a>
+            <a href="/pages/aboutUs/aboutUs.html">跳转关于我们页</a>
+            <el-button>默认按钮</el-button>
+            <el-button type="primary" @click = "clickMe()">主要按钮</el-button>
+            <el-button type="success">成功按钮</el-button>
+            <el-button type="info">信息按钮</el-button>
+            <el-button type="warning">警告按钮</el-button>
+            <el-button type="danger">危险按钮</el-button>
+            <i class = "el-icon-platform-eleme"></i>
+            <div>
+                <img src="../../assets/img/start.jpg" alt="">
+            </div>
+        </div>
+        #include('../../include/footer.html');
+    </div>
+    #include('../../include/script.html');
+</body>
+</html>

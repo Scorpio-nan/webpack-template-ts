@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    #include('../../include/head.html');
+</head>
+<body>
+    <div id = "app" v-cloak>
+        #include('../../include/header.html');
+        <div class = "container">
+            {{msg}}
+            <a href="/">跳转首页</a>
+            <children @emit-click = "clickChild" message = "我是父组件传过来的值"></children>
+        </div>
+        #include('../../include/footer.html');
+    </div>
+    #include('../../include/script.html');
+</body>
+</html>
